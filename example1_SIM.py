@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """
 September 2020 by Oliver Gurney-Champion & Misha Kaandorp
 oliver.gurney.champion@gmail.com / o.j.gurney-champion@amsterdamumc.nl
@@ -11,24 +13,12 @@ matplotlib
 scipy
 joblib
 """
-
-# import
-import numpy as np
-from config import hyperparams as hp_example
+# import simulations as sim
+from config import hyperparams as hp_example_1
 from simulations import sim
 
-dropout = [0.1, 0.2, 0.3, 0.4, 0.5]
-arg = hp_example()
-
-matNN = np.zeros([len(dropout), 3, 4])
-stability = np.zeros([len(dropout), 3])
-
+# Import parameters
+arg = hp_example_1()
 
 my_sim = sim(30, arg)
-matlsq = my_sim.run_fit()
-
-for i, drop in enumerate(dropout):
-    print('\n simulation at dropout of {drop}\n'.format(drop=drop))
-    arg.net_pars.dropout = drop
-    matNN[i, :, :], stability[i, :] = my_sim.run_NN()
-
+matNN, stability = my_sim.run_NN()

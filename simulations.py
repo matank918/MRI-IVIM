@@ -168,9 +168,6 @@ class sim:
             [normDp_lsq, rmse_Dp / normDp_lsq, Spearman[2, 0], cv_result[2] / normDp_lsq]
         ])
 
-        print(
-            '\nresults from NN: columns show themean, the SD/mean, the systematic error/mean, the RMSE/mean and the Spearman coef [DvDp,Dvf,fvDp] \n'
-            'the rows show D, f and D*\n')
         print([normD_lsq, '  ', rmse_D / normD_lsq, ' ', Spearman[0, 0], cv_result[0]])
         print([normf_lsq, '  ', rmse_f / normf_lsq, ' ', Spearman[1, 0], cv_result[1]])
         print([normDp_lsq, '  ', rmse_Dp / normDp_lsq, ' ', Spearman[2, 0], cv_result[2]])
