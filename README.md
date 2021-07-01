@@ -5,7 +5,8 @@ ivim deep lerning net based on the work of Oliver Gurney-Champion & Misha Kaando
 runnig example1 file start run of the net with the baseline parameters  
 runnig example2 file reproduce our Dropout optimization serch 
 
-the model ran on simulated data. SNR level is hyperparameter. 
+the model ran on simulated data. 
+SNR level is hyperparameter. 
 
 all parmaeters of the net, training scheme and simulation can be cahnge in the config file. 
 figure result are saved to plots folder. 
