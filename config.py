@@ -11,7 +11,7 @@ class train_pars:
             self.lr = 0.001  # this is the learning rate.
         else:
             self.lr = 0.00003  # this is the learning rate.
-        self.max_epochs = 100
+        self.max_epochs = 2
         self.patience = 10  # this is the number of epochs without improvement that the network waits untill determining it found its optimum
         self.batch_size = 128  # number of datasets taken along per iteration
         self.maxit = 500  # max iterations per epoch
@@ -98,7 +98,7 @@ class sim:
         self.sims = 1000000  # number of simulations to run
         self.num_samples_eval = 100000  # number of simualtiosn te evaluate. This can be lower than the number run.
         # Particularly to save time when fitting. More simulations help with generating sufficient data for the neural network
-        self.repeats = 5  # this is the number of repeats for simulations
+        self.repeats = 1  # this is the number of repeats for simulations
         self.rician = False  # add rician noise to simulations; if false, gaussian noise is added instead
         self.range = ([0.0005, 0.05, 0.01],
                       [0.003, 0.55, 0.1])
